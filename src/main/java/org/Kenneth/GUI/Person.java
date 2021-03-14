@@ -7,15 +7,17 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class Person{
     public String name;
     public String height;
+    public String birthDate;
 
-
-    Person(){
+    public Person(){
         this.height = "";
         this.name = "";
+        this.birthDate = "";
     }
-    Person(String name,String height){
+    public Person(String name, String height, String birthDate){
         this.name = name;
         this.height = height;
+        this.birthDate =  birthDate;
     }
 
     public void setName(String name) {
