@@ -26,16 +26,19 @@ public class Request {
         return actualObj.get("results").toString();
     }
 
-    static public ArrayList<Person> mapToPerson(String persons) throws IOException {
+    static public ArrayList<Person> getPersons() throws IOException {
         ObjectMapper mapper = new ObjectMapper();
-        JsonNode actualObj = mapper.readTree(persons);
-        ArrayList<Person> personArrayList = new ArrayList<>();
-        int len = actualObj.size();
-        int i = 0;
-        while (i<len){
-
+        JsonNode arrayNode = mapper.readTree(getCharsInfo());
+        ArrayList<Person> characters = new ArrayList<>();
+        for (JsonNode node: arrayNode){
+            String name = node.get("name").asText();
+            String height = node.get("height").asText();
+            String year = node.get("birth_year").asText();
+            Person person =  new Person(name,height,year);
+            characters.add(person);
         }
-        return personArrayList;
+
+        return characters;
     }
 
 
