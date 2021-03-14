@@ -1,5 +1,7 @@
 package org.Guia.GUI;
 
+import org.Guia.Request.Person;
+
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -27,6 +29,7 @@ public class Interface {
         f.setSize(300,400);
         f.setVisible(true);
     }
+
 
 
 

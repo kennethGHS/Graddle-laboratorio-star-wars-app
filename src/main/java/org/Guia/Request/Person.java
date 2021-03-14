@@ -1,4 +1,4 @@
-package org.Guia.GUI;
+package org.Guia.Request;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

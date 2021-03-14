@@ -2,7 +2,6 @@ package org.Guia.Request;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.Guia.GUI.Person;
 import org.apache.commons.io.IOUtils;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -13,7 +12,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 
-public class Request {
+public class Request implements BasicRequest {
 
     static public String getCharsInfo() throws IOException {
         ObjectMapper map = new ObjectMapper();
@@ -26,7 +25,7 @@ public class Request {
         return actualObj.get("results").toString();
     }
 
-    static public ArrayList<Person> getPersons() throws IOException {
+    public ArrayList<Person> getPersons() throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         JsonNode arrayNode = mapper.readTree(getCharsInfo());
         ArrayList<Person> characters = new ArrayList<>();
