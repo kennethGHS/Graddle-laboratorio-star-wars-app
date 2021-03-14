@@ -1,8 +1,8 @@
-package org.Kenneth.Request;
+package org.Guia.Request;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.Kenneth.GUI.Person;
+import org.Guia.GUI.Person;
 import org.apache.commons.io.IOUtils;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 
-public class Resquest {
+public class Request {
 
     static public String getCharsInfo() throws IOException {
         ObjectMapper map = new ObjectMapper();

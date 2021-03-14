@@ -1,15 +1,14 @@
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.Kenneth.GUI.Person;
+import org.Guia.GUI.Person;
 
 import javax.swing.*;
 import java.util.ArrayList;
 
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.List;
 
-import static org.Kenneth.Request.Resquest.getCharsInfo;
+import static org.Guia.Request.Request.getCharsInfo;
 
 public class Main {
 
