@@ -20,8 +20,9 @@ public class Person{
         this.birthDate =  birthDate;
     }
 
-    public void setName(String name) {
+    public String setName(String name) {
         this.name = name;
+        return this.name;
     }
 
     public void setHeight(String height) {
