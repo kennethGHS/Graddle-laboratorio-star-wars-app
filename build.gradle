@@ -1,5 +1,7 @@
 plugins {
     id 'application'
+    id "org.sonarqube" version "3.1.1"
+
 }
 
 group 'org.example'
@@ -39,4 +41,11 @@ test {
 
 application {
     mainClass = 'Main'
+}
+sonarqube {
+  properties {
+    property "sonar.projectKey", "kennethGHS_Graddle-laboratorio-star-wars-app"
+    property "sonar.organization", "kennethghs"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
 }
