@@ -11,6 +11,7 @@ public class Main {
     public static void main(String args[]) throws IOException {
         Interface interfaz = new Interface();
         interfaz.executeFrame(getPersons());
+        System.out.println("Ending program");
     }
 
 }
